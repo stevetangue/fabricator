@@ -1,0 +1,19 @@
+<script type="text/babel">
+const Button = React.createClass({
+    render: function() {
+        return <button type="button" onClick={this.onClick}>Click me</button>
+    },
+
+    onClick: function(ev) {
+        alert('the button was clicked');
+    }
+});
+
+ReactDOM.render((<Button/>), document.getElementById('example'));
+
+</script>
+
+
+<div id="example" class="container">
+
+</div>

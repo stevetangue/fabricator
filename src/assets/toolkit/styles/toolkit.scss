@@ -1,0 +1,18 @@
+/**
+ * Toolkit styles
+ */
+
+
+
+
+/* set icon path location to bootstrap-sass folder asset */
+$icon-font-path: ( "../fonts/") !default;
+
+
+/* themes styles variable override */
+@import "styles-bootstrap-2.scss";
+
+
+.f-menu ul li a, .f-menu .f-menu__heading{
+    font-size:100%;
+}

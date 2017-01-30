@@ -1,0 +1,33 @@
+/*
+styles-application.scss
+*/
+ 
+
+
+/* 1. ATOM - individual element  */
+@import "atom/_a-form";
+@import "atom/_a-grid";
+
+/* 2. MOLECULE - group of atoms combined */
+@import "molecule/_mol-form-group";
+
+/* 3. ORGANISM - independant/living/working module  */
+@import "organism/_org-newbuildingblock";
+
+/* 3. TEMPLATES - TPL  */
+/**
+@import "template/_tpl-name";
+...
+**/
+
+/* 4. PAGES - PG */
+/**
+@import "page/_pg-name"; 
+...
+**/
+
+
+
+/* 0. DEBUGGER Styles - for UI-DEV only */
+@import "_debugger";
+ 

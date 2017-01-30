@@ -1,0 +1,15 @@
+colors:
+  primary:
+    Dark: "#000000"
+    Light: "dddddd"
+    Lighter: "#eeeeee"
+    Lightest: "#f3f3f3"
+    
+    
+    
+  secondary:
+    Blue: "#337ab7"
+    Yellow: "#f0ad4e"
+    Green: "#5cb85c"
+    Red: "#d9534f"
+

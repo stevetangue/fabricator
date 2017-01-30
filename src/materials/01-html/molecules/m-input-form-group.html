@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-3">
+
+        <label class="a-label" title="Custom label">Name</label>
+        <!-- read -->
+        <div class="mol-form-group mode-read">            
+            <span class="mol-form-control-read" title="James">James <i class="glyphicon glyphicon-pencil pull-right"></i></span>           
+        </div>
+
+        <!-- edit -->
+        <div class="mol-form-group mode-edit hidden"> 
+            <input class="mol-form-control-edit" value="James" type="text" />  
+            <div class="mol-form-control-menu mol-form-control-menu-down  mol-form-control-menu-show">
+                <button class="click-ok"><i class="glyphicon glyphicon-ok " aria-hidden="true"></i></button>
+                <button class="click-cancel"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+            </div>
+        </div>  
+
+    </div>
+    
+    <div class="col-md-3">
+
+        <label class="a-label" title="Custom label">Name</label>
+        <!-- read -->
+        <div class="mol-form-group mode-read-1" >            
+            <a class="mol-form-control-read btn-link" title="Trial Balance, Journal Entries and other Accountancy Papers" href="#">Trial Balance, Journal Entries and other Accountancy Papers <i class="glyphicon glyphicon-pencil pull-right"></i></a>           
+        </div>
+
+        <!-- edit -->
+        <div class="mol-form-group mode-edit-1 hidden"> 
+            <input class="mol-form-control-edit" value="Trial Balance, Journal Entries and other Accountancy Papers" type="text" />  
+            <div class="mol-form-control-menu mol-form-control-menu-down  mol-form-control-menu-show">
+                <button class="click-ok"><i class="glyphicon glyphicon-ok " aria-hidden="true"></i></button>
+                <button class="click-cancel"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+            </div>
+        </div>  
+
+    </div>
+</div> 
+
+<script>
+    /* Temporary basic script to quickly show interaction */
+    $(".mode-read").click(function () {
+        $(".mode-read").hide();
+        $(".mode-edit").removeClass('hidden');
+    });
+   
+    
+    $(".mode-read-1").click(function () {
+        $(".mode-read-1").hide();
+        $(".mode-edit-1").removeClass('hidden');
+    });
+    
+    
+    $(".click-ok, .click-cancel").click(function () {
+        $(".mode-read").show();
+        $(".mode-edit").addClass('hidden');
+        $(".mode-read-1").show();
+        $(".mode-edit-1").addClass('hidden');
+    });
+</script>

@@ -1,0 +1,62 @@
+<script type="text/babel">
+var RowHeaderSection = React.createClass ({
+    render: function () {
+
+        return (
+            <div>
+               <div className="a-row-header">
+                   <div className="a-column span6">
+                       <div className="form-group m-l10 m-b0">
+                           <h4><span>NEW BUILDING BLOCK EDIT MODE - subheader edit</span></h4>
+                           <input className={"form-control " + this.props.editmode} type="text" defaultValue="NEW BUILDING BLOCK EDIT MODE - subheader edit" />
+                       </div>
+                   </div>
+
+                   <div className="a-column span6">
+                       <a className={"btn-link a-btn-link-icon btn-small pull-right " + this.props.editmode}>
+                           <i className="fa fa-arrows fa-lg"></i>
+                       </a>
+
+                       <button className={"btn btn-default btn-mini  pull-right m-b10 " + this.props.editmode}>
+                           <i className="fa fa-remove"></i>
+                           &nbsp;&nbsp;Remove Section
+                       </button>
+                       <div className={"btn-group pull-right m-r10 " + this.props.editmode} data-toggle="buttons-radio">
+                           <button type="button" className="btn btn-default btn-mini  show-title active">
+                               <i className="fa fa-eye"></i>
+                               &nbsp;&nbsp;Show title
+                           </button>
+                           <button type="button" className="btn btn-default btn-mini  hide-title 1">
+                               <i className="fa fa-eye-slash"></i>
+                               &nbsp;&nbsp;Hide title
+                           </button>
+                       </div>
+                   </div>
+
+                   <div className={"row-fluid a-column pull-left" + this.props.editmode}>
+                       <div className="form-group span12 p-l10 m-b0 p-r10">
+                           <span className="hidden">Enter guidance for this section here</span>
+                           <textarea className="form-control" value="" placeholder="Enter guidance for this section here"></textarea>
+                       </div>
+                   </div>
+               </div>
+            </div>
+     )
+    }
+});
+
+
+ReactDOM.render(
+    <div>
+        <RowHeaderSection />
+    </div>,
+  document.getElementById('RowHeaderSection')
+);
+
+</script>
+
+
+<!-- reactjs components -->
+<div id="RowHeaderSection" class="container">
+
+</div>

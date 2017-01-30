@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-3">
+
+        <label class="a-labelk" title="Custom label">Text area label</label>
+        <!-- read -->
+        <div class="mol-form-group mode-read-textarea">            
+            <span class="mol-form-control-read" title="James">Text area lorem ipsum dolor area lorem ipsum dolor olor area lorem ipsum dolorolor area lorem ipsum dolor <i class="glyphicon glyphicon-pencil pull-right"></i></span>           
+        </div>
+
+        <!-- edit -->
+        <div class="mol-form-group mode-edit-textarea hidden"> 
+            <textarea class="mol-form-control-edit" rows="4" cols="50">Text area lorem ipsum dolor area lorem ipsum dolor olor area lorem ipsum dolorolor area lorem ipsum dolor</textarea>
+            <div class="mol-form-control-menu mol-form-control-menu-down  mol-form-control-menu-show">
+                <button class="click-ok-textarea"><i class="glyphicon glyphicon-ok " aria-hidden="true"></i></button>
+                <button class="click-cancel-textarea"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+            </div>
+        </div>  
+
+    </div>
+</div> 
+
+<script>
+    /* Temporary basic script to quickly show interaction */
+    $(".mode-read-textarea").click(function () {
+        $(".mode-read-textarea").hide();
+        $(".mode-edit-textarea").removeClass('hidden');
+    });
+    $(".click-edit-textarea").click(function () {
+        $(".mode-read").show();
+        $(".mode-edit").addClass('hidden');
+    });
+    $(".click-ok-textarea, .click-cancel-textarea").click(function () {
+        $(".mode-read-textarea").show();
+        $(".mode-edit-textarea").addClass('hidden');
+    });
+</script>

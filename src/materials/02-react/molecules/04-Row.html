@@ -1,0 +1,111 @@
+<script type="text/babel">
+
+var baseUrl = " ";
+
+var Row = React.createClass ({
+
+    render: function () {
+
+    var btnAddStyle = {
+        position: 'absolute',
+        bottom:4,
+        right:0
+    };
+    var btnMargin = {
+        marginRight:5
+    };
+    var btnInOutdentStyle = {
+        position: 'absolute',
+        bottom:4,
+        left:0
+    };
+
+     return (
+             <div>
+                <div className={"a-row a-row-edit a-row-lv1 " + this.props.className}>
+                    <div className="a-column span4">
+                        <div className="a-column proc-num">{this.props.number}</div>
+                        <div className="a-column proc-txt">Procedure text sample content em dolors amet sit</div>
+                    </div>
+
+                    <div className="a-column span2">
+                        <div>assertion text here here here</div>
+                    </div>
+
+                    <div className="a-column span2">
+                        <div className="checkbox m-t0">
+                            <label className="a-label" title="Red">
+                                <input  className="a-checkbox"  type="checkbox" defaultValue="1" />
+                                Red
+                            </label>
+                        </div>
+                        <div className="checkbox">
+                            <label className="a-label" title="Blue">
+                                <input className="a-checkbox"  type="checkbox" defaultValue="0" />
+                                Blue
+                            </label>
+                        </div>
+                        <div className="checkbox">
+                            <label className="a-label" title="Green">
+                                <input className="a-checkbox"  type="checkbox" defaultValue="-1" />
+                                Green
+                            </label>
+                        </div>
+                    </div>
+
+                    <div className="a-column span2">
+                        <div className="checkbox m-t0">
+                            <label className="a-label" title="Griffith Tchenpan">
+                                <input  className="a-checkbox"  type="checkbox" defaultValue="1" />
+                                GT. <a href={baseUrl}>01-Aug-2016</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div className="a-column span2">
+                        <div className="auto-persist editable-area fullwidth p-0 m-0"  data-field="Comments">Completed orem ispsum dolo orem ispsum dolor amet site xt</div>
+                    </div>
+
+
+                    <a href={baseUrl} className={"a-btn-link-icon  btn-small btn-hover " + this.props.editmode}>
+                        <i className="fa fa-remove fa-lg"></i>
+                    </a>
+
+                    <button className={"btn btn-default btn-mini " + this.props.editmode} type="button" style={btnAddStyle}>
+                        <i className="fa fa-plus"></i>
+                    </button>
+                    <div className=""  style={btnInOutdentStyle}>
+                        <button className={"btn btn-default btn-mini pull-left " + this.props.editmode + this.props.outdent} type="button"  title="Outdent" style={btnMargin} >
+                            <i className="fa fa-outdent"></i>
+                        </button>
+
+                        <button className={"btn btn-default btn-mini m-r10 pull-left " + this.props.editmode + this.props.indent} type="button"title="Indent">
+                            <i className="fa fa-indent"></i>
+                        </button>
+                    </div>
+                </div>
+             </div>
+        )
+    }
+});
+
+
+
+ReactDOM.render(
+    <div>
+        <Row className="a-row-lv1 b-h m-b10" number="1."      indent="display-none" outdent="display-none" editmode="" />
+        <Row className="a-row-lv2 b-g m-b10" number="1.1"     indent="" outdent=""  editmode=""/>
+        <Row className="a-row-lv3 b-b m-b10" number="1.1.1"   indent="" outdent="" editmode=""/>
+        <Row className="a-row-lv1 b-g m-b10" number="2"       indent="display-none" outdent=""  editmode=""/>
+        <Row className="a-row-lv4 b-g m-b10" number="2.1.1.1" indent="" outdent="display-none" editmode="" />
+    </div>,
+  document.getElementById('Row')
+);
+
+</script>
+
+
+<!-- reactjs components -->
+<div id="Row" class="container">
+
+</div>

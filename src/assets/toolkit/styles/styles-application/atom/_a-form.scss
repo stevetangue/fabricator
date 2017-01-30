@@ -1,0 +1,13 @@
+/*
+forms.scss
+*/
+
+/* label */
+.a-label {
+    font-size:13px;
+    font-weight: normal;
+    display:block;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}

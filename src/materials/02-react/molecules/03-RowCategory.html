@@ -1,0 +1,58 @@
+<script type="text/babel">
+
+var RowCategory = React.createClass ({
+    render: function () {
+
+    var btnRowCategoryEditSaveStyle = {
+        position: 'absolute',
+        bottom:9,
+        right:4
+
+    };
+
+    return (
+            <div>
+                <div className="a-row-header-category a-row-lv1">
+                    <div className="a-column span4">
+                      <b className="a-column proc-num">#</b>
+                      <b className="a-column proc-txt">Procedure</b>
+                    </div>
+                    <div className="a-column span2">
+                      <b>Assertion</b>
+                    </div>
+                    <div className="a-column span2">
+                      <b>Response</b>
+                    </div>
+                    <div className="a-column span2">
+                      <b>Completed</b>
+                    </div>
+                    <div className="a-column span2">
+                      <b>Comments</b>
+                    </div>
+                    <button className={"btn btn-default btn-mini a-btn-edit " + this.props.editmode} style={btnRowCategoryEditSaveStyle}>
+                        <i className="fa fa-pencil fa-lg"></i>
+                    </button>
+                    <button className={"btn btn-default btn-mini a-btn-save " + this.props.editmode} style={btnRowCategoryEditSaveStyle}>
+                        <i className="fa fa-check fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+        )
+    }
+});
+
+
+ReactDOM.render(
+    <div>
+        <RowCategory />
+    </div>,
+  document.getElementById('RowCategory')
+);
+
+</script>
+
+
+<!-- reactjs components -->
+<div id="RowCategory" class="container">
+
+</div>

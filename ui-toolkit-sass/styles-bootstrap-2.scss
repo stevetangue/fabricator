@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 07/07/2016, 8:18:45 AM
+    Author     : SteveTangue
+*/
+
+
+/* set icon path location to bootstrap-sass folder asset */
+$icon-font-path: ( "../styles/bootstrap-sass/assets/fonts/bootstrap/") !default;
+
+/* themes styles variable override */
+@import "themes/themes";
+
+/* UI Framework import - Bootstrap 3.3.7 */
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+/* Styles application import - MyWorkpapers */
+@import "styles-application/styles-application";
+
+/* Styles application import - MyWorkpapers */
+@import "styles-application/organism/_org-newbuildingblock";

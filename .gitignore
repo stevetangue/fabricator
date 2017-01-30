@@ -1,0 +1,12 @@
+# Dependency directories
+node_modules/
+
+# Runtime
+dist/
+
+# IDE
+nbproject/
+.vscode/
+
+# Optional npm cache directory
+.npm

@@ -1,0 +1,108 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/07/2016, 8:38:03 AM
+    Author     : SteveTangue
+*/
+
+
+
+.mol-form-group {
+    @extend .form-group;
+    position:relative;
+    cursor: pointer;
+    width:100%;
+
+    /* menu showing down */
+    &:hover .mol-form-control-menu  {
+        display:block;
+    }  
+    .glyphicon {
+        color:$gray-light;
+    }
+}
+
+
+/* READ mode <span> */
+.mol-form-control-read {
+    @extend .form-control;
+    border:1px solid white;
+    padding-left:3px;
+    position: relative;
+    display: inline-block;
+    box-shadow: none;
+    display:block;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    background:none;
+    /* hide pencil - edit glyphicon */
+    i {
+        display:none;
+    }
+    &:hover{
+        border:1px solid $gray-lighter ;
+        padding-left:3px;
+        box-shadow: none;
+        cursor:text;
+        /* show pencil - edit glyphicon */
+        i {
+            display:block;
+            background:white;
+            padding:2px;
+            position:absolute;
+            right:8px;
+            top:8px;
+        }
+    }
+} 
+
+/* EDIT mode <input> */
+.mol-form-control-edit {
+    @extend .form-control;
+    padding-left:3px;
+    position: relative;
+    display: inline-block;
+    box-shadow: none;
+    display:block;
+}    
+
+/* Menu - append class UP or DOWN */
+.mol-form-control-menu {
+    display: none;
+    position: absolute;
+    z-index:999;
+
+    button {
+        @extend .btn;
+        @extend .btn-default;
+        @extend .btn-xs;
+        @extend .pull-left;
+        display: inline-block;  
+    }
+}
+
+/* Menu SHOW always - edit mode for <input>, <textarea> */
+.mol-form-control-menu-show {
+    display:block;
+}
+
+/* Menu DOWN - for <input>, <textarea>*/
+.mol-form-control-menu-down{
+    right:0;
+    bottom:-21px;
+}
+/* Menu UP - for example on <select> */
+.mol-form-control-menu-up {
+    right:0;  
+    top:-21px;  
+}
+
+
+
+
+
+

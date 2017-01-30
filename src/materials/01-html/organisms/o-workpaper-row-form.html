@@ -1,0 +1,54 @@
+<div class="a-row-mwpform">
+     <i class="fa fa-wpforms"></i>
+    <div class="col-xs-1">   
+         <!-- read -->
+        <div class="mol-form-group wkpfile-mode-read pull-left">  
+            <a href="#" class="mol-form-control-read pull-left" title="A21-1.">A21-1. <i class="glyphicon glyphicon-pencil pull-right"></i></a>           
+        </div>
+
+        <!-- edit -->
+        <div class="mol-form-group wkpfile-mode-edit hidden pull-right"> 
+            <input class="mol-form-control-edit" value="A21-1" type="text" />  
+        </div>  
+    </div>
+    <div class="col-xs-4">
+        <!-- read -->
+        <div class="mol-form-group wkpfile-mode-read">            
+            <a  href="#" class="mol-form-control-read" title="Responsible Individual Review and Conclusion">Responsible Individual Review and Conclusion <i class="glyphicon glyphicon-pencil pull-right"></i></a>           
+        </div>
+
+        <!-- edit -->
+        <div class="mol-form-group wkpfile-mode-edit hidden"> 
+            <input class="mol-form-control-edit" value="Responsible Individual Review and Conclusion" type="text" />  
+            <div class="mol-form-control-menu mol-form-control-menu-down  mol-form-control-menu-show">
+                <button class="wkpfile-click-ok"><i class="glyphicon glyphicon-ok " aria-hidden="true"></i></button>
+                <button class="wkpfile-click-cancel"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></button>
+            </div>
+        </div>  
+    </div>
+    <div class="col-xs-2">
+        <div class="checkbox">
+            <label>
+            <input type="checkbox" value="">   
+            Complete
+            </label>
+        </div>   
+    </div>
+    <div class="col-xs-2"></div>
+    <div class="col-xs-1"></div>
+    <div class="col-xs-1"></div>
+</div>
+
+
+
+<script>
+    /* Temporary basic script to quickly show interaction */
+    $(".wkpfile-mode-read").click(function () {
+        $(".wkpfile-mode-read").hide();
+        $(".wkpfile-mode-edit").removeClass('hidden');
+    });
+    $(".wkpfile-click-ok, .wkpfile-click-cancel").click(function () {
+        $(".wkpfile-mode-read").show();
+        $(".wkpfile-mode-edit").addClass('hidden');
+    });
+</script>

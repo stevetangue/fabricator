@@ -1,0 +1,166 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21/07/2016, 2:53:53 PM
+    Author     : SteveTangue
+*/
+
+$a-link-color: #0088cc;
+$gray-border: #dfdfdf;
+$gray-lighter: #ededed;
+$gray-lightest: #fafafa;
+
+.a-col-bg { 
+    background:$gray-lighter;
+    border-right:3px solid white;
+    padding:10px; 
+    box-sizing: border-box;
+}
+
+.a-border-none {
+    border:none;
+}
+
+.a-table {
+    margin-bottom:10px;
+}
+
+.a-row {
+    @extend .row;
+    padding-top:6px;
+    padding-bottom:6px;
+    border-bottom:1px solid $gray-lighter;
+    display:block;
+    position:relative;
+    padding-right:15px;
+}
+.a-row-icon {
+    position:absolute;
+    left:0;
+    top:10px;
+}
+
+.a-col-icon {
+    position:absolute;
+    left:0;
+    top:10px;
+}
+
+.a-row-header {
+    background:$gray-lighter;
+    border-top:1px solid $gray-border;
+    border-bottom:1px solid $gray-border;
+    padding:10px;
+    .a-btn-drag {
+        display:block;
+        position:absolute;
+        right:4px;
+        top:10px;
+    }
+}
+
+.a-row-category {
+    @extend .row;
+    background:$gray-lightest;
+    border-bottom:1px solid $gray-lighter;
+    padding:10px 10px 10px 12px; 
+    margin:0; 
+    
+    display: flex;
+    align-items: center;
+    div span  {
+        @extend .a-label;
+        font-size:11px; 
+        backbround:$gray-lighter;
+    }   
+} 
+
+.a-row-mwpfolder {
+    @extend .row;
+    background:#DFF0D8;
+    border: 1px solid #D6E9C6;
+    padding-left:10px;
+    margin:0; 
+    border-radius: $border-radius-base;
+
+    display: flex;
+    align-items: center;
+       
+    .mol-form-group {
+        margin-bottom:0;
+    }
+    /* override default to match myworkpaper folder row green background */
+    .mol-form-control-read {
+        background:#DFF0D8;
+        border: 1px solid #DFF0D8; 
+        margin-bottom:0;
+        
+        /* hide pencil - edit glyphicon */
+        i {
+            display:none;
+        }
+        &:hover{
+            border:1px solid #D6E9C6;
+            /* show pencil - edit glyphicon */
+            i {
+                background:#DFF0D8;
+            }
+        }
+    } 
+    .fa-folder, .fa-folder-open {
+     color:$gray-light;   
+    }
+}
+
+
+.a-row-mwpform {
+    @extend .row;
+    border-bottom:1px solid $gray-lighter;
+    padding:8px 0 8px 12px;
+    margin:0; 
+    
+    display: flex;
+    align-items: center;
+    .mol-form-group {
+        margin-bottom:0;
+    }
+    
+    .mol-form-group {
+        margin-bottom:0;
+        a {
+            color:$a-link-color;
+            
+        }
+    }
+}
+
+.a-row-subheader {
+    background:#f3f3f3;
+    border-bottom:1px solid $gray-border;
+    b {
+        @extend .a-label;
+        font-weight:bold;
+    }
+}
+
+
+.a-row-edit {
+    button {
+        display:none;
+        position:absolute;
+        right:4px;
+        top:6px;
+    }
+    &:hover {
+        button {
+            display:block;
+        }
+    }
+}
+
+
+
+
