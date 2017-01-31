@@ -10,20 +10,10 @@ var RowMenu = React.createClass ({
             return (
                 <div>
                   <div className={"a-row " + this.props.editmode}>
-                    <div className="input-group pull-left m-r10 m-b0" >
-                        <input type="text" className="form-control text-center input-sm" defaultValue="1" style={inlineStyle} />
-                        <span className="input-group-btn">
+    
                         <button className="btn btn-default btn-small" type="button">Add Row</button>
-                      </span>
-                    </div>
-                    <div className="input-group pull-left m-r10 m-b0">
-                      <input type="text" className="form-control text-center input-sm" defaultValue="1" style={inlineStyle} />
-                      <span className="input-group-btn">
-                      <button className="btn btn-default btn-small" type="button">Add Open Row</button>
-                      </span>
-                    </div>
-                    <a className="btn btn-default btn-small pull-left m-r10" href="#" data-type="rowheading">Add Heading</a>
-                    <a className="btn btn-default btn-small pull-left" href="#" data-type="guidance">Add Guidance Row</a>
+            
+
                   </div>
                 </div>
         )

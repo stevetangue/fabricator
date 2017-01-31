@@ -1,0 +1,457 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 21/07/2016, 8:52:58 AM
+    Author     : SteveTangue
+*/
+
+@import "_bootstrap-responsive";
+@import "_bootstrap";
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             #dddddd;
+$gray-lighter:           #f4f4f4;
+$gray-lightest:          #dfdfdf;
+
+$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+$gray-border: #dfdfdf;
+
+
+/* TO REMAIN in BOOTSTRAP v2 from v3 html and css markup of the new building block; */
+.f-left {
+    float:left;
+}
+.f-right {
+    float:-right;
+}
+.m-r8px {
+    margin-right:3px;
+}
+
+
+/* FORM */
+.form-group {
+    @extend .control-group;
+}
+.form-control {
+    @extend .input-block-level;
+}
+.input-group {
+    @extend .input-prepend;
+    @extend .input-append;
+}
+
+input[type="text"].input-sm, select.input-sm  {
+    height:26px;
+    min-height:26px;
+    padding:0 10px;
+    font-size:12px;
+    line-height:1.5;
+    border-radius:3px;
+}
+
+/* BUTTON */
+.btn .btn-default {
+    @extend .btn;
+}
+.btn-xs {
+    @extend .btn-mini;
+}
+/* TO REMAIN in BOOTSTRAP v2 from v3 html and css markup of the new building block; */
+
+
+
+
+/*#############################################################*/
+/*######## BLOCK STYLES - [BOOTSTRAP]v2 ##########*/
+/*#############################################################*/
+
+/* 1. ATOM - individual element  */
+/*
+_a-button.scss
+*/
+/* button icon */
+.a-btn-link-icon {
+    color:$gray-light;
+}
+
+/*
+_a-forms.scss
+*/
+/* FORM */
+.a-label {
+    font-weight: normal;
+    display:block;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.a-checkbox {
+    position:absolute;
+}
+
+/*
+_a-grid.scss
+*/
+/* GRID */
+
+.a-row {
+    @extend .row-fluid;
+    padding:6px 0;
+    border-bottom:1px solid $gray-border;
+    position:relative;
+    display:block;
+}
+
+.a-row-header {
+    @extend .a-row;
+    background:$gray-lighter;
+    border-top:1px solid $gray-border;
+    border-bottom:1px solid $gray-border;
+
+    .a-btn-drag {
+        display:block;
+        position:absolute;
+        right:4px;
+        top:10px;
+    }
+}
+
+.a-row-header-category {
+    @extend .a-row;
+    @extend .p-t10;
+    @extend .p-b0;
+    border-bottom:1px solid $gray-border;
+    background:white;
+    b {
+        @extend .a-label;
+        font-weight:bold;
+        font-size:13px;
+    }
+    .a-btn-edit {
+        position:absolute;
+        bottom:8px;
+        right:0;
+     };
+
+    .a-btn-save {
+        position:absolute;
+        bottom:8px;
+        right:0;
+     };
+
+
+}
+
+.a-row-edit {
+
+    .btn-add-row, .btn-indent-row, .btn-outdent-row {
+        display:none;
+    }
+
+    /* btn-fixed - button will always be shown by defautl and to a fixed location top right of the row */
+    .btn-fixed {
+        position:absolute;
+        right:0;
+        top:0;
+        background:white;
+        /* @extend .border-b;
+         @extend .border-l;
+         @extend .border-r;
+         border-radius: 0;*/
+    }
+    /* btn-hover - button will be hidden by default and on row hover will be shown */
+    .btn-hover {
+        display:none;
+        @extend .btn-fixed;;
+    }
+    &:hover {
+        .btn-hover,  .btn-add-row, .btn-indent-row, .btn-outdent-row  {
+            display:block;
+        }
+    }
+}
+
+.a-row-sub-procedure {
+    @extend .row;
+    display:block;
+    position:relative;
+    padding:6px 0 6px 8px;
+    box-sizing:border-box;
+    border-top:1px dashed $gray-border;
+}
+
+
+.a-column {
+
+}
+
+.a-column-bg {
+    background:$gray-lighter;
+    padding:10px 10px 16px 10px;
+    box-sizing: border-box;
+    @extend .m-b10;
+}
+
+
+.a-column-edit {
+    position:relative;
+    /* btn-fixed - button will always be shown by defautl and to a fixed location top right of the row */
+    .btn-fixed {
+        position:absolute;
+        left:4px;
+        bottom:8px;
+        padding:0;
+        margin:0;
+    }
+    /* btn-hover - button will be hidden by default and on row hover will be shown */
+    .btn-hover {
+        display:none;
+        @extend .btn-fixed;
+    }
+    &:hover {
+        .btn-hover {
+            display:block;
+        }
+        .a-column-bg {
+            background:white;
+        }
+        background:white;
+    }
+
+}
+
+/* row style class lv1,2,3,4 */
+.a-row-lv1 {
+    .proc-num {
+        width:10%;
+        float:left;
+        text-indent:2%;
+        text-align:center;
+    }
+    .proc-txt {
+        float:right;
+        width:85%;
+    }
+}
+.a-row-lv2 {
+    .proc-num {
+        width:20%;
+        float:left;
+        text-indent:5%;
+        text-align:right;
+    }
+    .proc-txt {
+        width:75%;
+        float:right;
+    }
+}
+.a-row-lv3 {
+    .proc-num {
+        width:30%;
+        float:left;
+        text-indent:10%;
+        text-align:right;
+    }
+    .proc-txt {
+        width:65%;
+        float:right;
+    }
+}
+.a-row-lv4 {
+    .proc-num {
+        width:45%;
+        float:left;
+        text-indent:15%;
+        text-align:right;
+    }
+    .proc-txt {
+        width:50%;
+        float:right;
+    }
+}
+
+.row-dragger {
+    padding: 0;
+    margin: 0;
+    width: 1px;
+    background-image: url('/img/dragger.png');
+    cursor: move;
+    opacity: 0.8;
+}
+
+/* 2. MOLECULE - group of atoms combined */
+
+/*
+_mol-form-group.scss
+*/
+.mol-form-group {
+    @extend .form-group;
+    position:relative;
+    cursor: pointer;
+    @extend .m-b0;
+
+    .mol-form-control {
+        @extend .form-control;
+        position: relative;
+        display: inline-block;
+    }
+
+    /* menu showing up */
+    &:hover .mol-form-control-menu-up {
+        display:block;
+    }
+    .mol-form-control-menu-up {
+        display: none;
+        position: absolute;
+        top:-21px;
+        right:0;
+        z-index:999;
+
+        .a-btn-form-control {
+            @extend .btn;
+            @extend .btn-default;
+            @extend .btn-xs;
+            @extend .pull-left;
+            display: inline-block;
+        }
+    }
+
+    /* menu showing down */
+    &:hover .mol-form-control-menu-down {
+        display:block;
+    }
+    .mol-form-control-menu-down {
+        display: none;
+        position: absolute;
+        z-index:999;
+        bottom:-21px;
+        right:0;
+
+        .a-btn-form-control {
+            @extend .btn;
+            @extend .btn-default;
+            @extend .btn-xs;
+            @extend .pull-left;
+            display: inline-block;
+        }
+    }
+}
+
+
+/* ORG New Building Block */
+.org-new-building-block {
+    position:relative;
+    margin-bottom:30px;
+}
+
+
+
+
+/* debugger - utilities  */
+@import "../../../styles/styles-application/_debugger";
+
+
+
+
+
+
+@media print {
+    h4 {
+        .input-xxlarge {
+            width:100%;
+            height:auto;
+            display:inline-block;
+            float:left;
+            margin-bottom:10px;
+        }
+    }
+
+
+    .org-new-building-block {
+        .a-column {
+            float:left;
+            display:inline;
+            .proc-txt {
+                float:right;
+            }
+        }
+        .span12 {
+            width: 100%;
+            *width: 99.94680851063829%;
+            margin-right:15px;
+        }
+        .span11 {
+            width: 91.45299145299145%;
+            *width: 91.39979996362975%;
+            margin-right:15px;
+        }
+        .span10 {
+            width: 82.90598290598291%;
+            *width: 82.8527914166212%;
+            margin-right:15px;
+        }
+        .span9 {
+            width: 74.35897435897436%;
+            *width: 74.30578286961266%;
+            margin-right:15px;
+        }
+        .span8 {
+            width: 65.81196581196582%;
+            *width: 65.75877432260411%;
+            margin-right:15px;
+        }
+        .span7 {
+            width: 57.26495726495726%;
+            *width: 57.21176577559556%;
+            margin-right:15px;
+        }
+        .span6 {
+            width: 48.717948717948715%;
+            *width: 48.664757228587014%;
+            margin-right:15px;
+        }
+        .span5 {
+            width: 40.17094017094017%;
+            *width: 40.11774868157847%;
+            margin-right:15px;
+        }
+        .span4 {
+            width: 31.623931623931625%;
+            *width: 31.570740134569924%;
+            margin-right:15px;
+        }
+        .span3 {
+            width: 23.076923076923077%;
+            *width: 23.023731587561375%;
+            margin-right:15px;
+
+        }
+        .span2 {
+            width: 14.52991452991453%;
+            *width: 14.476723040552828%;
+            margin-right:15px;
+        }
+        .span1 {
+            width: 5.982905982905983%;
+            *width: 5.929714493544281%;
+            margin-right:15px;
+        }
+
+    }
+}
